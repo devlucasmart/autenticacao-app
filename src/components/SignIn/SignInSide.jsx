@@ -29,7 +29,8 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
-export function SignInSide() {
+// Exporte como default
+export default function SignInSide() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -49,7 +50,7 @@ export function SignInSide() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://media.cnn.com/api/v1/images/stellar/prod/141216183300-simpsons-25-anniversary-image-4.jpg?q=w_1920,h_1080,x_0,y_0,c_fill)',
+            backgroundImage: `url('/images/auth.jpg')`,
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -113,7 +114,7 @@ export function SignInSide() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href="/signup" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
